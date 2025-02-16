@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchemaVerse: SQL Strategy Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>SchemaVerse: SQL Strategy Game</h1>
+    </header>
+
+    <!-- How to Play Section -->
+    <div class="instructions">
+        <div id="howToPlay">
+            <h2>🚀 How to Play SchemaVerse</h2>
+            <p>
+                Welcome to <b>SchemaVerse</b>, a space-based SQL strategy game where you command fleets using SQL
+                commands!
+                Your goal is to dominate the galaxy by strategically moving ships, attacking enemies, and mining
+                resources.
+            </p>
+
+            <h3>📜 Gameplay Instructions:</h3>
+            <ol>
+                <li><b>Join the Game:</b> Sign up or log in to start playing.</li>
+                <li><b>View Your Fleet:</b> Your ships are displayed on the game board.</li>
+                <li><b>Command Your Ships:</b> Use SQL queries in the command console to control your fleet.</li>
+                <li><b>Attack Enemies:</b> Reduce enemy ship HP using SQL update commands.</li>
+                <li><b>Mine Resources:</b> Gather resources strategically to strengthen your fleet.</li>
+                <li><b>Win the Game:</b> The last player standing wins the round!</li>
+            </ol>
+
+            <h3>💻 SQL Commands:</h3>
+            <ul>
+                <li><code>SELECT * FROM ships WHERE player = 'YourName';</code> ➝ View your ships</li>
+                <li><code>UPDATE ships SET position_x = 5, position_y = 7 WHERE id = 3;</code> ➝ Move a ship</li>
+                <li><code>UPDATE ships SET strength = strength - 10 WHERE id = 4;</code> ➝ Attack an enemy</li>
+                <li><code>DELETE FROM ships WHERE strength <= 0;</code> ➝ Destroy weak ships</li>
+            </ul>
+
+            <h3>🏆 Winning Conditions:</h3>
+            <p>Eliminate all enemy ships to be the last player standing. The winner earns bonus points on the
+                leaderboard!</p>
+
+            <h3>🎮 Tips & Strategies:</h3>
+            <ul>
+                <li>Move strategically to avoid enemy attacks.</li>
+                <li>Monitor your ship’s strength and retreat if necessary.</li>
+                <li>Use SQL efficiently to issue quick commands.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <!-- SQL Console -->
+        <div class="sql-console">
+            <h2>💻 SQL Console</h2>
+            <textarea id="sqlCommand" placeholder="Enter SQL command..."></textarea>
+            <button id="executeBtn">Execute</button>
+            <div id="queryResult"></div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-board">
+            <h2>🌌 Game Board</h2>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard">
+            <h2>🏆 Leaderboard</h2>
+            <ul id="leaderboardList"></ul>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

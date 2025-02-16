@@ -1,0 +1,139 @@
+/* General Page Styling */
+body {
+    background: url("im.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* Header */
+h1 {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    font-size: 28px;
+    color: #FFD700;
+}
+
+/* Instructions Panel */
+.instructions {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-align: left;
+}
+
+.instructions h2 {
+    color: #FFD700;
+    text-align: center;
+}
+
+.instructions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.instructions li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Main Game Layout */
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Panels */
+.sql-console, .game-board, .leaderboard {
+    width: 30%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* SQL Console */
+textarea {
+    width: 90%;
+    height: 80px;
+    background: black;
+    color: lightgreen;
+    border: 1px solid white;
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Game Board */
+#gameCanvas {
+    width: 100%;
+    height: 300px;
+    background: black;
+    border: 2px solid white;
+}
+
+/* Leaderboard */
+#leaderboardList {
+    list-style: none;
+    padding: 0;
+}
+#leaderboard {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid gold;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Highlight ships on attack */
+@keyframes attackEffect {
+    0% { background-color: red; }
+    50% { background-color: yellow; }
+    100% { background-color: red; }
+}
+
+/* Game board style */
+#gameCanvas {
+    width: 100%;
+    height: 300px;
+    background: black;
+    border: 3px solid gold;
+}
+
+/* Winner popup */
+.winner-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    color: gold;
+    font-size: 24px;
+    border: 2px solid gold;
+    box-shadow: 0 0 10px gold;
+}
